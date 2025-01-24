@@ -1,12 +1,12 @@
 const http = require('http');
 const os = require('os');
 
-console.log("Kubia server starting...");
+console.log("Version 2 -Kubia server starting...");
 
 var handler = function(request, response) {
-  console.log("Received request from " + request.connection.remoteAddress);
+  console.log("Version 2 - Received request from " + request.connection.remoteAddress);
   response.writeHead(200);
-  response.end("You've hit " + os.hostname() + "\n");
+  response.end("Response from v2 - You've hit " + os.hostname() + "\n");
 };
 
 var www = http.createServer(handler);
